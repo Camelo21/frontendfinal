@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Libros</title>
+</head>
+<body>
+    <h1>Lista de Libros</h1>
+
+    <!-- Formulario para ingresar libros -->
+    <h2>Agregar Libro</h2>
+    <form [formGroup]="form" novalidate>
+        <div class="main-user-info">
+            <div class="user-input-box">
+                <label for="fullName">titulo</label>
+                <input type="text" id="fullName" name="fullName" placeholder="titulo" formControlName="fullName" [(ngModel)]="libro.titulo" name="nombres" />
+            </div>
+
+            <div class="user-input-box">
+                <label for="fullUserName">referencai</label>
+                <input type="text" id="fullUserName" name="fullUserName" placeholder="referencia" formControlName="fullUserName" [(ngModel)]="libro.referencia" name="apellidos" />
+            </div>
+
+            <div class="user-input-box">
+                <label for="email">autor</label>
+                <input type="text" id="email" name="email" placeholder="autor" formControlName="email" [(ngModel)]="libro.autor" name="correo"/>
+            </div>
+
+            <div class="user-input-box">
+                <label for="Identification">precio</label>
+                <input type="number" id="Identification" name="Identification" placeholder="preio"formControlName="Identification" [(ngModel)]="libro.precio" name="num_identidad"/>
+            </div>
+
+            <div class="user-input-box">
+                <label for="age">ubicacion</label>
+                <input type="text" id="age"  placeholder="ubicacion"formControlName="age" [(ngModel)]="libro.ubicacion" name="age">
+            </div>
+          
+            <div class="JoinT">
+                <button id="joiin" (click)="btnlibro()">publicar</button>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- Lista de libros -->
+    <h2>Libros</h2>
+    <ul id="lista-libros"></ul>
+
+    
+</body>
+</html>
